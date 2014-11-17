@@ -1,0 +1,53 @@
+.hero {
+  background: $hero-bg;
+  text-align: center;
+  @media #{$medium-up} {
+    background-image: url('/images/orbit-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    text-align: left;
+    height: 100%;
+    max-height: 600px;
+  }
+
+
+  .message-row {
+    padding-top: 20px;
+    @media #{$medium-up} {
+      padding-top: 120px;
+
+      .message-title {
+        font-size: rem-calc(52);
+      }
+    }
+
+    .message-text {
+      font-size: rem-calc(18);
+      color: $dark-gray;
+    }
+
+    .git-button {
+      @include button(
+        // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+        rem-calc(14),
+        // Primary color set in settings file. Default: $primary-color.
+        $light-gray
+      );
+      color: $blue;
+      border: 2px solid $blue;
+      font-size: rem-calc(30);
+
+      &:hover {
+        color: $light-gray;
+        background: $blue;
+      }
+
+      .icon:before {
+        padding-right: rem-calc(10);
+      }
+
+    }
+
+  }
+}

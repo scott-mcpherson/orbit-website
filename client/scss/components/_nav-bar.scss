@@ -1,0 +1,31 @@
+.nav-bar {
+  @include flexbox();
+  height: $nav-bar-height;
+  line-height: $nav-bar-height;
+
+  .title {
+    line-height: $nav-bar-height;
+  }
+  .nav-bar-items {
+    line-height: $nav-bar-height;
+    position: absolute;
+    right: 0;
+
+    .nav-bar-item {
+      color: $dark-gray;
+      display: inline-block;
+      padding-left: $nav-bar-item-padding;
+      padding-right:$nav-bar-item-padding;
+      transition: 0.2s color;
+
+      &.active,
+      &:hover {
+        cursor: pointer;
+        color: $blue;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

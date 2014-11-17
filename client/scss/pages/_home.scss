@@ -1,0 +1,14 @@
+.home-row {
+  @media #{$medium-up} {
+    margin-top: rem-calc(70);
+
+    h2 {
+      font-size: rem-calc(48);
+    }
+
+    .tab-code {
+      margin-top: rem-calc(10);
+
+    }
+  }
+}
